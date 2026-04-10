@@ -71,7 +71,7 @@ Machine Learning 2 exam work.
 
 ### Stack
 
-Python, PyTorch, vLLM, ONNX Runtime, Optuna, Qiskit, D-Wave Ocean SDK, FastAPI, Docker
+Python, PyTorch, vLLM, ONNX Runtime, Optuna, Qiskit, D-Wave Ocean SDK, FastAPI, Docker, LaTeX, SciPy, NetworkX, Matplotlib, NumPy, scikit-learn, Qiskit Aer, Google Colab
 
 ---
 
