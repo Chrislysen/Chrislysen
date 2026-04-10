@@ -16,6 +16,24 @@ Papers on arXiv:
 
 ---
 
+### Coursework (UC Berkeley, Spring 2026)
+
+**Enrolled:**
+- CS 61C — Great Ideas in Computer Architecture
+- EECS 127 — Optimization Models in Engineering
+- ENGIN 183 — Technology Innovation and Entrepreneurship
+- ASTRON C12 — The Planets (astrophysics breadth)
+
+**Auditing:**
+- CS 152/252A — Computer Architecture and Engineering
+- CS 170 — Efficient Algorithms and Intractable Problems
+- CS 185/285 — Deep Reinforcement Learning, Decision Making, and Control
+- CS 61B — Data Structures
+
+Focus areas: systems architecture, optimization theory, and deep RL — chosen to complement my ML deployment research with hardware-level understanding and formal optimization foundations.
+
+---
+
 ### Research interests
 
 **ML systems and deployment optimization** — How do you find the best inference configuration (backend, quantization, batch size) when most of the search space crashes or violates constraints? I built a two-phase optimizer (Thermal Budget Annealing → constrained TPE) that treats crashes as data and maps feasible regions before exploiting them.
