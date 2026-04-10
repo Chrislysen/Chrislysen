@@ -2,7 +2,9 @@
 
 Second-year AI student at Inland Norway University of Applied Sciences, currently on exchange at UC Berkeley. I build ML systems that work under real-world constraints — crash-prone hardware, tight budgets, noisy quantum backends — and I publish the results honestly, including when things don't work.
 
-Paper pending on arXiv: *Feasible-First Exploration for Constrained ML Deployment Optimization in Crash-Prone Hierarchical Search Spaces* (on hold, April 2026).
+Papers on arXiv:
+* **Hidden Device Heterogeneity in Constrained ML Deployment** — PyTorch's INT8 quantization silently switches from GPU to CPU, creating 39% feasibility flip rates. (submitted April 2026)
+* **Feasible-First Exploration for Constrained ML Deployment Optimization** — Crash-aware TBA→TPE hybrid optimizer. (on hold, April 2026)
 
 ---
 
@@ -27,7 +29,7 @@ Paper pending on arXiv: *Feasible-First Exploration for Constrained ML Deploymen
 ### Pinned repositories
 
 [**Constrained-ML-Deployment**](https://github.com/Chrislysen/Constrained-ML-Deployment)
-Research repo and paper for Thermal Budget Annealing (TBA). Crash-aware deployment optimization under hard latency/memory constraints. Two-phase TBA→TPE hybrid, DeployBench benchmark suite, 46 tests, results across 5 GPU types. Includes v1–v3 paper PDFs.
+Two research papers sharing the DeployBench infrastructure. (1) TBA: crash-aware two-phase optimizer for constrained ML deployment. (2) Hidden Device Heterogeneity: empirical study showing INT8 dynamic quantization silently moves inference to CPU, creating stochastic feasibility boundaries. 2,150 measurement trials, 5 GPU types, full reproducibility.
 
 [**deploy-agent**](https://github.com/Chrislysen/deploy-agent)
 Productized version of TBA. CLI + FastAPI dashboard + MCP server for automated ML deployment optimization. Give it a model and hardware constraints, it searches backends/quantization/batch sizes and returns the best feasible config with full evidence. Crash handling, structured JSON logs, live WebSocket charts.
