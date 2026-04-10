@@ -31,6 +31,9 @@ Papers on arXiv:
 [**Constrained-ML-Deployment**](https://github.com/Chrislysen/Constrained-ML-Deployment)
 Two research papers sharing the DeployBench infrastructure. (1) TBA: crash-aware two-phase optimizer for constrained ML deployment. (2) Hidden Device Heterogeneity: empirical study showing INT8 dynamic quantization silently moves inference to CPU, creating stochastic feasibility boundaries. 2,150 measurement trials, 5 GPU types, full reproducibility.
 
+[**SLO-Guard**](https://github.com/Chrislysen/SLO-Guard)
+SLO-Guard: Crash-aware autotuner for LLM serving. Optimizes vLLM configs (batching, memory, quantization) under hard latency/memory SLOs. Treats crashes as data — learns feasibility boundaries to avoid wasted trials. Two-phase TBA→TPE hybrid, curl-based benchmarking, 5 optimizer baselines. Built on top of Constrained-ML-Deployment research. First results: 8/15 configs feasible on A100, best config 443ms avg latency.
+
 [**deploy-agent**](https://github.com/Chrislysen/deploy-agent)
 Productized version of TBA. CLI + FastAPI dashboard + MCP server for automated ML deployment optimization. Give it a model and hardware constraints, it searches backends/quantization/batch sizes and returns the best feasible config with full evidence. Crash handling, structured JSON logs, live WebSocket charts.
 
