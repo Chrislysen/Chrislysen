@@ -5,6 +5,7 @@ Second-year AI student at Inland Norway University of Applied Sciences, currentl
 Papers on arXiv:
 * **Hidden Device Heterogeneity in Constrained ML Deployment** — PyTorch's INT8 quantization silently switches from GPU to CPU, creating 39% feasibility flip rates. (submitted April 2026)
 * **Feasible-First Exploration for Constrained ML Deployment Optimization** — Crash-aware TBA→TPE hybrid optimizer. (on hold, April 2026)
+* **SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving** — Two-phase TBA→TPE optimizer for vLLM tuning. 150-trial A100 study: 75/75 feasibility, zero crashes; statistically tied with random search on best latency (p=0.84) but 4.4× tighter cross-seed variance under concurrent load. (on hold, April 2026)
 
 ---
 
@@ -12,6 +13,7 @@ Papers on arXiv:
 
 - Expanding multi-GPU benchmark results for the TBA deployment optimizer (H100, A100, RTX 5080, L4, T4)
 - Waiting on D-Wave LaunchPad QPU access to complete the quantum annealing benchmark
+- Polishing the SLO-Guard paper for public release after arXiv moderation clears; next step is cross-hardware validation on non-A100 GPUs
 - Coursework at UC Berkeley (CS 61C, concurrent with research)
 
 ---
@@ -50,7 +52,7 @@ Focus areas: systems architecture, optimization theory, and deep RL — chosen t
 Two research papers sharing the DeployBench infrastructure. (1) TBA: crash-aware two-phase optimizer for constrained ML deployment. (2) Hidden Device Heterogeneity: empirical study showing INT8 dynamic quantization silently moves inference to CPU, creating stochastic feasibility boundaries. 2,150 measurement trials, 5 GPU types, full reproducibility.
 
 [**SLO-Guard**](https://github.com/Chrislysen/SLO-Guard)
-SLO-Guard: Crash-aware autotuner for LLM serving. Optimizes vLLM configs (batching, memory, quantization) under hard latency/memory SLOs. Treats crashes as data — learns feasibility boundaries to avoid wasted trials. Two-phase TBA→TPE hybrid, curl-based benchmarking, 5 optimizer baselines. Built on top of Constrained-ML-Deployment research. First results: 8/15 configs feasible on A100, best config 443ms avg latency.
+Crash-aware autotuner for vLLM serving. Optimizes vLLM configs (batching, memory, execution mode) under hard latency/memory SLOs. Crashes are encoded as constraint violations and replayed into a warm-started TPE phase, so failed trials inform subsequent search. 150-trial A100 study on Qwen2-1.5B: 75/75 feasibility, zero crashes; statistically tied with random search on peak latency (Mann-Whitney p=0.84) but 4.4× tighter cross-seed variance on best latency under concurrent load. Paper on arXiv (moderation pending). Both sequential and concurrent harness datasets published for replication.
 
 [**deploy-agent**](https://github.com/Chrislysen/deploy-agent)
 Productized version of TBA. CLI + FastAPI dashboard + MCP server for automated ML deployment optimization. Give it a model and hardware constraints, it searches backends/quantization/batch sizes and returns the best feasible config with full evidence. Crash handling, structured JSON logs, live WebSocket charts.
