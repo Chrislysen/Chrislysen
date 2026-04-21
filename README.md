@@ -5,7 +5,7 @@ Second-year AI student at Inland Norway University of Applied Sciences, currentl
 Papers on arXiv:
 * **Hidden Device Heterogeneity in Constrained ML Deployment** — PyTorch's INT8 quantization silently switches from GPU to CPU, creating 39% feasibility flip rates. (submitted April 2026)
 * **Feasible-First Exploration for Constrained ML Deployment Optimization** — Crash-aware TBA→TPE hybrid optimizer. (on hold, April 2026)
-* **SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving** — Two-phase TBA→TPE optimizer for vLLM tuning. 150-trial A100 study: 75/75 feasibility, zero crashes; statistically tied with random search on best latency (p=0.84) but 4.4× tighter cross-seed variance under concurrent load. (on hold, April 2026)
+* **[SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving](https://arxiv.org/abs/2604.17627)** — Two-phase TBA→TPE optimizer for vLLM tuning. 150-trial A100 study: 75/75 feasibility, zero crashes; statistically tied with random search on best latency (p=0.84) but 4.4× tighter cross-seed variance under concurrent load. (arXiv:2604.17627, April 2026)
 
 ---
 
