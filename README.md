@@ -3,8 +3,8 @@
 Second-year AI student at Inland Norway University of Applied Sciences, currently on exchange at UC Berkeley. I build ML systems that work under real-world constraints — crash-prone hardware, tight budgets, noisy quantum backends — and I publish the results honestly, including when things don't work.
 
 Papers on arXiv:
-* **Feasible-First Exploration for Constrained ML Deployment Optimization** — Crash-aware TBA→TPE hybrid optimizer. 80% discovery rate of the globally optimal model vs. 30% for standalone TPE; reduced wasted trials from 74% to 42%. Benchmarked on DeployBench: 5 architectures × 3 backends × 3 quantizations × 6 batch sizes across 5 NVIDIA GPUs (H100, A100, RTX 5080, L4, T4), 10 seeds each. 46/46 tests passing. (arXiv:2604.25073, April 2026)
-* **SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving** — Two-phase TBA→TPE optimizer for vLLM tuning. 150-trial A100 study: 75/75 feasibility, zero crashes; statistically tied with random search on best latency (p=0.84) but 4.4× tighter cross-seed variance under concurrent load. (arXiv:2604.17627, April 2026)
+* **[Feasible-First Exploration for Constrained ML Deployment Optimization](https://arxiv.org/abs/2604.25073)** — Crash-aware TBA→TPE hybrid optimizer. 80% discovery rate of the globally optimal model vs. 30% for standalone TPE; reduced wasted trials from 74% to 42%. Benchmarked on DeployBench: 5 architectures × 3 backends × 3 quantizations × 6 batch sizes across 5 NVIDIA GPUs (H100, A100, RTX 5080, L4, T4), 10 seeds each. 46/46 tests passing. (arXiv:2604.25073, April 2026)
+* **[SLO-Guard: Crash-Aware, Budget-Consistent Autotuning for SLO-Constrained LLM Serving](https://arxiv.org/abs/2604.17627)** — Two-phase TBA→TPE optimizer for vLLM tuning. 150-trial A100 study: 75/75 feasibility, zero crashes; statistically tied with random search on best latency (p=0.84) but 4.4× tighter cross-seed variance under concurrent load. (arXiv:2604.17627, April 2026)
 * **Hidden Device Heterogeneity in Constrained ML Deployment** — PyTorch's INT8 quantization silently switches from GPU to CPU, creating 39% feasibility flip rates. (submitted April 2026)
 
 ---
