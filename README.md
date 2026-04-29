@@ -14,6 +14,7 @@ Papers on arXiv:
 - Expanding multi-GPU benchmark results for the TBA deployment optimizer (H100, A100, RTX 5080, L4, T4)
 - Waiting on D-Wave LaunchPad QPU access to complete the quantum annealing benchmark
 - Cross-hardware validation of SLO-Guard on non-A100 GPUs
+- Iterating on the personal-assistant retrieval stack — speaker-aware ranking and operational event-log feedback as signals for retrieval quality
 - Coursework at UC Berkeley (CS 61C, concurrent with research)
 
 ---
@@ -44,6 +45,8 @@ Focus areas: systems architecture, optimization theory, and deep RL — chosen t
 
 **Agentic AI and applied CV** — LLM-powered tool-calling agents for domain-specific automation, and competition-grade object detection pipelines with ONNX inference and ensemble methods.
 
+**Personal AI and grounded retrieval** — How does a local-first assistant remember what matters across years of notes and conversations, and ground its answers in that history without hallucinating? I'm building one (private repo) with a hybrid BM25 + dense-embedding + reciprocal-rank-fusion retrieval stack, a classifier-driven learning subsystem that distills raw conversation logs into a queryable knowledge vault, and a fixed-query eval harness so retrieval changes are measured rather than hand-waved.
+
 ---
 
 ### Pinned repositories
@@ -73,7 +76,7 @@ Machine Learning 2 exam work.
 
 ### Stack
 
-Python, PyTorch, vLLM, ONNX Runtime, Optuna, Qiskit, D-Wave Ocean SDK, FastAPI, Docker, LaTeX, SciPy, NetworkX, Matplotlib, NumPy, scikit-learn, Qiskit Aer, Google Colab
+Python, PyTorch, vLLM, ONNX Runtime, Optuna, Qiskit, D-Wave Ocean SDK, FastAPI, Docker, LaTeX, SciPy, NetworkX, Matplotlib, NumPy, scikit-learn, Qiskit Aer, Google Colab, sentence-transformers, Ollama, SQLite
 
 ---
 
